@@ -1,10 +1,7 @@
 // 1. Palidroma:
 // Chiedere all’utente di inserire una parola 
 var userWord = prompt("Type a word").toLowerCase("");
-console.log(userWord);
-
-
-
+document.getElementById("user_word").innerHTML = userWord
 // Creare una funzione per capire se la parola inserita è palindroma
 function checkPalindromes(userWord){
     // convert string to array
@@ -18,10 +15,9 @@ function checkPalindromes(userWord){
     console.log(palindrome);
 
     if (userWord == palindrome){
-        console.log("Palindrome!");
+        document.getElementById("result").innerHTML = "Palindrome!"
     } else {
-        console.log("Not a palindrome!");
-    }
+        document.getElementById("result").innerHTML = "Not A Palindrome!"    }
 }
+checkPalindromes(userWord);
 
-console.log(checkPalindromes);
